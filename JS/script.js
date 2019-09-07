@@ -2,7 +2,6 @@ let photos = document.querySelector('#photos')
 let people = document.querySelector('#people')
 let person = document.querySelector('#person')
 let header = document.querySelector('#Options')
-let returnButton = document.querySelector('#returnButton')
 const API = 'https://randomuser.me/api/?results=52';
 let results={};
 let countApiCall=0;
@@ -26,7 +25,8 @@ queryAPI()
 
 function prepData(data, numCall= 0) { 
     let cont=0;
-    for(var index = 0; index < 52; index++) {
+    for (let index = numCall*52-52; index < Object.keys(data).length + numCall*52-52; index++) {
+        // results = {...results,...data[index]};  
         results[index] = data[cont];
         console.log(`Insertion:${index} == ${data[cont]}`);
         cont++;
@@ -35,10 +35,9 @@ function prepData(data, numCall= 0) {
 }
 
 //se genera la imagen
-function createPhoto(data, llamados= 0) {   
+function createPhoto(data, numCall= 0) {   
 
-    for (var index = 0; index < 52; index++) {        
-                    
+    for (let index = numCall*52-52; index < Object.keys(data).length + numCall*52-52; index++) {    
         let article = document.createElement('article')
         article.classList.add("article-persona");
         let nameImg = document.createElement('div')
@@ -63,14 +62,13 @@ function createPhoto(data, llamados= 0) {
         article.appendChild(imagen)
         article.appendChild(nameImg)        
         photos.appendChild(article)
-        header.appendChild(clickImage)             
+        header.appendChild(clickImage)               
     }
 
 }
 
 //le damos acción para traer 1 sola imagen
 photos.addEventListener('click', selectImage, false);
-returnButton.addEventListener('click',redirectHome, false )
 
 //creamos función para capturar la información en un tarjeta
 function selectImage(event) {   
@@ -101,10 +99,25 @@ function retornHome(event){
     person.style.display= "none";
 }
 
-//creamos el
+//se dan propiedades al infinte scroll
 
 window.onscroll = function() {    
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {            
         queryAPI()
     }
 };  
+
+var imagenes=document.getElementsByTagName("img");
+for(var i=0;i<imagenes.length;i++)
+{
+ 
+	// Creamos el evento mouseover para cada imagen
+	imagenes[i].addEventListener("mouseover", function(e){
+		document.getElementById("photos").style.backgroundImage="url('"+e.target.currentSrc+"')";
+	});
+ 
+	// Creamos el evento mouseout para cada imagen
+	imagenes[i].addEventListener("mouseout", function(e){
+		document.getElementById("photos").style.backgroundImage="";
+	});
+}

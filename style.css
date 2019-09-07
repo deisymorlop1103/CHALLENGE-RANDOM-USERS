@@ -11,7 +11,7 @@
   display: none;
 }
 
-nav{
+nav {
   background-color: #3FB6BF;
   text-decoration-color: antiquewhite;
   text-decoration-line: none;
@@ -71,11 +71,26 @@ h2{
 .container{
     margin:0px 150px 150px 150px;
 }
-#lorem{
-    margin:0px 110px 110px 110px; 
-    padding: 100px;
-    text-align: justify;
+/* #lorem{
+    /* margin:0px 10px 10px 10px;  */
+    padding: 0px;
+    text-align: justify; */
 }
 body{
-  background-color: rgb(166, 243, 217);
+  /* background-color: rgb(166, 243, 217); */
+}
+
+.container{
+  background-color: #3FB6BF; 
+  /* text-decoration-color: antiquewhite;
+  text-decoration-line: none; */
+  padding: 22px 2px;
+  margin:2px;
+  font-size: 200%;
+  /* text-align: right; */
+  style="text-align:center"
+}
+
+.containerP{
+ 
 }
