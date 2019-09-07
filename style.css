@@ -1,0 +1,81 @@
+.photos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    
+}
+.person{
+  display: none;
+}
+
+nav{
+  background-color: #3FB6BF;
+  text-decoration-color: antiquewhite;
+  text-decoration-line: none;
+  padding: 2px 7px;
+  margin:5px;
+}
+
+.selected{  
+  padding: 30px;
+  background-color: rgb(208, 245, 233);
+  display: flex;  
+  
+}
+
+.person{
+  padding: 10%;  
+  height: 500px;  
+  background-position: center top;
+}
+
+.imgSelected{
+  padding: 15px;
+  border-radius: 20px, 0, 20px, 0;
+}
+
+.infoSelected{
+  padding: 30px;
+  font-size: 35px;
+}
+.tittleSelect{
+  color: #3FB6BF;
+  font-size: 40px;
+}
+
+img {
+  width:290px;
+  height:290px;
+  float:left;
+  margin:3px 3px 3px 20px;
+}
+h3{
+  color: #3FB6BF;
+  font-size: 40px;
+}
+h2{
+  color: #3FB6BF;
+}
+.lorem{
+    margin:0px 150px 150px 150px;
+    font-size: 20px;
+}
+.introduction{
+    margin:0px 0px 0px 150px;
+    font-size: 20px;
+    text-align: justify;
+}
+.container{
+    margin:0px 150px 150px 150px;
+}
+#lorem{
+    margin:0px 110px 110px 110px; 
+    padding: 100px;
+    text-align: justify;
+}
+body{
+  background-color: rgb(166, 243, 217);
+}
