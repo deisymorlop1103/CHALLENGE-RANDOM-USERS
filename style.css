@@ -72,12 +72,6 @@ h2{
     margin:0px 150px 150px 150px;
 }
 
-    padding: 0px;
-    text-align: justify; */
-}
-body{
-  /* background-color: rgb(166, 243, 217); */
-}
 
 .container{
   background-color: #3FB6BF; 
@@ -87,9 +81,6 @@ body{
   margin:2px;
   font-size: 200%;
   /* text-align: right; */
-  style="text-align:center"
+text-align:center"
 }
 
-.containerP{
- 
-}

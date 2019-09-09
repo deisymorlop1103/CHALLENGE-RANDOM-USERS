@@ -121,3 +121,4 @@ for(var i=0;i<imagenes.length;i++)
 		document.getElementById("photos").style.backgroundImage="";
 	});
 }
+//
