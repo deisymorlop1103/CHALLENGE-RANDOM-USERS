@@ -121,4 +121,11 @@ for(var i=0;i<imagenes.length;i++)
 		document.getElementById("photos").style.backgroundImage="";
 	});
 }
-//
+
+
+$('.block .details').hide();
+
+$(".block").click(function() {
+  $(this).find('.info').toggle();
+  $(this).find('.details').toggle();
+})
